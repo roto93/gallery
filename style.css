@@ -14,7 +14,7 @@
 header {
     display:flex;
     justify-content: space-between;
-    align-items:center;
+    align-itemss:center;
     margin:50px 30px;
 }
 header .title{
@@ -31,6 +31,9 @@ header li{
     font-size:20px;
     font-family: 'Courgette',sans-serif;
     margin-left:45px;
+}
+header li.active{
+    color:red;
 }
 header li:hover{
     font-weight: bold;
@@ -53,6 +56,10 @@ aside li{
     font-family: 'Bellota',sans-serif;
 }
 
+aside li.active{
+    color: skyblue;
+}
+
 aside li:hover{
     font-weight: bold;
 }
@@ -73,26 +80,33 @@ article{
     grid-template-columns: repeat(4,1fr);
 }
 
-.item{
+.items{
     cursor:pointer;
+    width: 0;
     height: 0px;
-    padding:50% 0 ;
+    padding:50%;
     overflow: hidden;
     /* border:1px solid black; */
     border-radius: 10px;
     opacity:0.8;
     transition:opacity 0.2s;
 }
-.item:hover{
+.items.hide{
+    display:none;
+}
+.items:hover{
     opacity:1;
 }
 
-.item .img{
+
+.items .img{
     position:absolute;
     min-width: 100%;
     min-height: 100%;
     max-height: 150%;
-    top:0;
-    left:0;
+    transform: translate(-50%,-50%);
+    transition:max-height 0.3s;
 }
-
+.items img:hover{
+    max-height: 160%;
+}
