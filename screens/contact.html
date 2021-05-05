@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vibur&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bellota&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="contact.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_9lyyP0gFJYpHzTnf7A7Be");
+        })();
+    </script>
+    <title>Contact</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="title">Pi</div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li><a href="./about.html">About</a></li>
+                    <li class="active"><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <p>Use FormSubmit</p>
+            <form action="https://formsubmit.co/2roto93stark@gmail.com" method="POST">
+                <input type="email" name="email" placeholder="tell me your email" required>
+                <textarea name="message" cols="30" rows="3" placeholder="leave your message here"></textarea>
+                <button type="submit">send</button>
+            </form>
+        </section>
+        <section>
+            <p>Use Email.JS</p>
+            <form id="emailjs" autocomplete="off">
+                <input type="hidden" autocomplete="anything">
+                <input type="email" name="email" placeholder="tell me your email" required>
+                <textarea name="message" cols="30" placeholder="leave your message here" rows="3"></textarea>
+                <button type="submit">send</button>
+            </form>
+        </section>
+    </div>
+    <script>
+        const emailJsForm = document.querySelector('#emailjs')
+        emailJsForm.addEventListener('submit', (event) => {
+            event.preventDefault()
+            emailjs.sendForm('service_7qn5kzd', 'template_b0w8yqc', emailJsForm)
+                .then(res => console.log(res), error => console.log(error))
+        })
+    </script>
+</body>
+
+</html>

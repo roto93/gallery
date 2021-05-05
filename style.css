@@ -2,20 +2,30 @@
     user-select: none;
     position:relative;
 }
+html{
+    min-height: 100vh;
+}
+body{
+    background:radial-gradient(at 70% 20%  , #FFECF4 0%,white 100%);
+    min-height: 100vh;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
 
 .container{
     position:relative;
     margin:0 auto;
     max-width: 1200px;
-    height: 100%;
-    border:1px solid black;
+    min-height: calc(100vh - 250px);
+    height: 50%;
+    /* border:1px solid black; */
 }
 
 header {
     display:flex;
     justify-content: space-between;
-    align-itemss:center;
-    margin:50px 30px;
+    align-items:center;
+    margin:0 30px 50px 30px;
 }
 header .title{
     font-size: 60px;
@@ -70,14 +80,13 @@ aside li:active{
 article{
     width: 85%;
     margin:0 auto;
-    margin-bottom: 50px;
 }
 
 .grid-container{
     display:grid;
     row-gap: 28px;
     column-gap: 24px;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
 }
 
 .items{
@@ -110,3 +119,28 @@ article{
 .items img:hover{
     max-height: 160%;
 }
+
+footer{
+    height: 150px;
+    width: 100%;
+    background-color: #4F4F4F;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 50px;
+}
+
+.footer-icons{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 160px;
+}
+
+footer i{
+    color:#8A8A8A
+}
+
+footer .fa-github{font-size: 40px;}
+footer .fa-envelope{font-size: 32px;}
+footer .fa-blogger{font-size: 40px;}

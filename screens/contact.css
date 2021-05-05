@@ -1,0 +1,20 @@
+section{
+    margin:25px 0;
+}
+
+form input{
+    display:block;
+    border: 1px solid darkgray;
+    width: 200px;
+    margin:5px;
+}
+
+form textarea {
+    display:block;
+    margin:5px
+}
+
+p{
+    font-size: 14px;
+    font-family: sans-serif;
+}
