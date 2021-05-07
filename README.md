@@ -1,3 +1,3 @@
 # gallery
 
-<img src="./src/images/Screenshot.png" alt=""/>
+<img src="./src/images/Screenshot1.png" alt=""/>
