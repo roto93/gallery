@@ -1,4 +1,8 @@
-# gallery
+# Description
+
+A simple website practice using React.
+
+# Gallery
 
 <img src="./src/images/Screenshot1.png" alt="" width="50%" />
 
